@@ -16,10 +16,13 @@ const LandingPage = () => {
 const StyledContainer = styled(motion.div)`
   padding: 0 5vw;
   width: 100%;
-  min-height: 90vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (min-width: 600px) {
+    min-height: 90vh;
+  }
 `;
 
 export default LandingPage;

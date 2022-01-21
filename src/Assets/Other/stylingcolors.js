@@ -1,1 +1,9 @@
-export const colors = { bg: "#0B0B0C", white: "#fff" };
+export const colors = { 
+    cyan: "#12B0FF",
+    bg: "#1C2239",
+    bgElements: "#212846",
+    white: "#F8F8F8",
+    red: "#D55B89", 
+    purple: "#9E6DD5",
+    green: "#0DD2A3"
+};

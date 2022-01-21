@@ -1,4 +1,5 @@
 import React from "react";
+import { ReactSVG } from 'react-svg'
 
 //Import styles and animations
 import styled from "styled-components";
@@ -6,7 +7,7 @@ import { colors } from "../Assets/Other/stylingcolors";
 import { motion } from "framer-motion";
 
 //Import logo
-import logo from "../Assets/Img/temp_logo.gif";
+import logo from "../Assets/Img/Mingo_Desk_Final_horizontal_White.svg";
 import burger from "../Assets/Img/burger.svg";
 
 const Nav = () => {
@@ -14,11 +15,10 @@ const Nav = () => {
     <StyledNav>
       <StyledMenu>
         <div className="desktop">
-          <img src={logo} alt="Zebraff" />
-          <h1>MingoDesku</h1>
+          <ReactSVG src={logo} alt="MingoSite" />
         </div>
         <div className="mobile">
-          <img src={burger} alt="Borgar" />
+          <ReactSVG src={burger} alt="Menu icon"/>
         </div>
       </StyledMenu>
     </StyledNav>
@@ -29,13 +29,9 @@ const StyledNav = styled(motion.nav)`
   position: fixed;
   bottom: 1rem;
   left: 1rem;
-  img {
-    width: 3rem;
-  }
-  .mobile {
-    img {
-      cursor: pointer;
-    }
+  svg {
+    height: 3rem;
+    cursor: pointer;
   }
   .desktop {
     display: none;
@@ -45,7 +41,10 @@ const StyledNav = styled(motion.nav)`
     display: flex;
     align-items: center;
     height: 10vh;
-    background-color: lightblue;
+    padding: 1rem 10rem;
+    svg {
+      height: 20rem;
+    }
     .desktop {
       display: flex;
       align-items: center;
