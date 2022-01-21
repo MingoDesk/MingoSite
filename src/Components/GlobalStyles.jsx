@@ -27,6 +27,22 @@ const GlobalStyles = createGlobalStyle`
     }
     a{
         text-decoration: none;
+        cursor: pointer;
+    }
+    button{
+        cursor: pointer;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    @media screen and (min-width: 600px) {
+        body {
+            .mobile {
+                display: none;
+            }
+        }
     }
 `;
 

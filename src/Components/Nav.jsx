@@ -1,14 +1,14 @@
 import React from "react";
-import { ReactSVG } from 'react-svg'
+import { ReactSVG } from "react-svg";
 
 //Import styles and animations
 import styled from "styled-components";
 import { colors } from "../Assets/Other/stylingcolors";
 import { motion } from "framer-motion";
 
-//Import logo
+//Import logos/other images
 import logo from "../Assets/Img/Mingo_Desk_Final_horizontal_White.svg";
-import burger from "../Assets/Img/burger.svg";
+import { MenuAlt1Icon as BurgerMenu } from "@heroicons/react/solid";
 
 const Nav = () => {
   return (
@@ -18,7 +18,7 @@ const Nav = () => {
           <ReactSVG src={logo} alt="MingoSite" />
         </div>
         <div className="mobile">
-          <ReactSVG src={burger} alt="Menu icon"/>
+          <BurgerMenu />
         </div>
       </StyledMenu>
     </StyledNav>
@@ -26,15 +26,13 @@ const Nav = () => {
 };
 
 const StyledNav = styled(motion.nav)`
+  z-index: 69;
   position: fixed;
   bottom: 1rem;
   left: 1rem;
   svg {
     height: 3rem;
     cursor: pointer;
-  }
-  .desktop {
-    display: none;
   }
   @media (min-width: 600px) {
     position: initial;
@@ -48,9 +46,6 @@ const StyledNav = styled(motion.nav)`
     .desktop {
       display: flex;
       align-items: center;
-    }
-    .mobile {
-      display: none;
     }
   }
 `;
