@@ -46,8 +46,10 @@ const SlideShow = () => {
     slidesPerView: 1,
     pagination: pagination,
     effect: "fade",
+    fadeEffect: { crossFade: true },
     loop: true,
-    autoplay: { delay: 2000, disableOnInteraction: false },
+    autoplay: {delay: 3000, disableOnInteraction: false },
+    grabCursor: true,
   };
 
   return (
@@ -58,8 +60,11 @@ const SlideShow = () => {
 };
 
 const Slide = styled(motion.div)`
-  height: 30vh;
+  min-height: 30vh;
   width: 100%;
+  @media (min-width: 600px) {
+    width: 70%;
+  }
   .swiper {
     z-index: 2;
     width: 100%;

@@ -19,9 +19,10 @@ const GlobalStyles = createGlobalStyle`
         }
     }
     body{
+        overflow-x: hidden !important;
         font-family: 'Montserrat', sans-serif;
         width: 100%;
-        overflow-x: hidden;
+        max-width: 100vw;
         background: ${colors.bg};
         color: ${colors.white};
     }
