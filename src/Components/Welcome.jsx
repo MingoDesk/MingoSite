@@ -51,6 +51,7 @@ const StyledWelcome = styled(motion.div)`
     border-radius: 0.3rem;
     padding: 1rem 2rem;
     width: 60%;
+    z-index: 2;
   }
 `;
 

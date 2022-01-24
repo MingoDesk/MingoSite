@@ -9,24 +9,31 @@ import { stagger, fade } from "../Assets/Other/animations";
 
 const Bgelememts = () => {
     return (
-        <motion.div variants={stagger} initial="before"  animate="after" >  
-            <BgElement1 variants={fade} />
-            <BgElement2 variants={fade} />
-            <BgElement3 variants={fade} />
-        </motion.div>
+        <StyledBgElements>  
+            <BgElement1 />
+            <BgElement2 />
+            <BgElement3 />
+        </StyledBgElements>
     );
 }
+
+const StyledBgElements = styled(motion.div)`
+`
 
 const BgElement1 = styled(motion.div)`
   position: absolute;
   background: ${colors.bgElements};
-  opacity: 1;
   height: 17rem;
   width: 17rem;
   transform: rotate(65deg);
   z-index: 0 !important;
   top: -10rem;
   right: -3rem;
+  @media (max-with: 600px){
+      position: initial;
+      display: none !important;
+      opacity: 0;
+  }
 `;
 
 const BgElement2 = styled(BgElement1)`
