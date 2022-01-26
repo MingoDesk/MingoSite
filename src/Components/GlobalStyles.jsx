@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { colors } from "../Assets/Other/stylingcolors";
+import { colors } from "../Assets/Other/themes";
 const GlobalStyles = createGlobalStyle`
     *{
         margin: 0;
@@ -24,7 +24,7 @@ const GlobalStyles = createGlobalStyle`
         width: 100%;
         max-width: 100vw;
         background: ${colors.bg};
-        color: ${colors.white};
+        color: ${colors.text};
     }
     a{
         text-decoration: none;

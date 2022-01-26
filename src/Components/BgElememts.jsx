@@ -1,50 +1,54 @@
-import React from 'react';
+import React from "react";
+import { useMediaQuery } from "react-responsive";
 
 //Import styled and animations
 import styled from "styled-components";
-import { colors } from '../Assets/Other/stylingcolors';
+import { colors } from "../Assets/Other/themes";
 
 import { motion } from "framer-motion";
-import { stagger, fade } from "../Assets/Other/animations";
+import { RemoveBgElements } from "../Assets/Other/animations";
 
 const Bgelememts = () => {
-    return (
-        <StyledBgElements>  
-            <BgElement1 />
-            <BgElement2 />
-            <BgElement3 />
-        </StyledBgElements>
-    );
-}
+  return (
+    <StyledBgElements
+      variants={RemoveBgElements(
+        useMediaQuery({ query: "(max-width: 600px)" })
+      )}
+      initial="before"
+      animate="after"
+    >
+      <BgElementSquare />
+      <BgElementCircle />
+      <BgElementSquare2 />
+    </StyledBgElements>
+  );
+};
 
 const StyledBgElements = styled(motion.div)`
-`
-
-const BgElement1 = styled(motion.div)`
   position: absolute;
-  background: ${colors.bgElements};
-  height: 17rem;
-  width: 17rem;
-  transform: rotate(65deg);
-  z-index: 0 !important;
-  top: -10rem;
-  right: -3rem;
-  @media (max-with: 600px){
-      position: initial;
-      display: none !important;
-      opacity: 0;
-  }
+  z-index: -1 !important;
 `;
 
-const BgElement2 = styled(BgElement1)`
+const BgElementCircle = styled(motion.div)`
+  position: absolute;
+  background: ${colors.bgElements};
+  height: 20rem;
+  width: 20rem;
+  transform: rotate(65deg);
+  top: -5rem;
+  left: 30rem;
   border-radius: 50%;
+`;
+
+const BgElementSquare = styled(BgElementCircle)`
+  border-radius: initial;
   height: 20vh;
   width: 20vh;
   top: 40rem;
   right: -2rem;
 `;
 
-const BgElement3 = styled(BgElement1)`
+const BgElementSquare2 = styled(BgElementSquare)`
   height: 12vh;
   width: 12vh;
   top: 55rem;

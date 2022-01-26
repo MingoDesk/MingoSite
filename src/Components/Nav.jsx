@@ -1,21 +1,25 @@
 import React from "react";
-import { ReactSVG } from "react-svg";
 
 //Import styles and animations
 import styled from "styled-components";
-import { colors } from "../Assets/Other/stylingcolors";
+import { colors } from "../Assets/Other/themes";
 import { motion } from "framer-motion";
 
 //Import logos/other images
-import logo from "../Assets/Img/Mingo_Desk_Final_horizontal_White.svg";
+import logo from "../Assets/Img/Mingo_Desk_Final_horizontal_White.png";
+import logoLight from "../Assets/Img/Mingo_Desk_Final_horizontal.png";
 import { MenuAlt1Icon as BurgerMenu } from "@heroicons/react/solid";
 
-const Nav = () => {
+const Nav = ({ toggleTheme, theme }) => {
   return (
     <StyledNav>
       <StyledMenu>
         <div className="desktop">
-          <ReactSVG src={logo} alt="MingoSite" />
+          <img
+            src={theme === "dark" ? logo : logoLight}
+            alt="MingoSite"
+            onClick={toggleTheme}
+          />
         </div>
         <div className="mobile">
           <BurgerMenu />
@@ -30,7 +34,7 @@ const StyledNav = styled(motion.nav)`
   position: fixed;
   bottom: 1rem;
   left: 1rem;
-  svg {
+  img {
     height: 3rem;
     cursor: pointer;
   }
@@ -40,9 +44,7 @@ const StyledNav = styled(motion.nav)`
     align-items: center;
     height: 10vh;
     padding: 1rem 10rem;
-    svg {
-      height: 20rem;
-    }
+
     .desktop {
       display: flex;
       align-items: center;

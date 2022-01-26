@@ -3,10 +3,12 @@ import React from "react";
 import image1 from "../Assets/Img/1.png";
 import image2 from "../Assets/Img/2.png";
 import image3 from "../Assets/Img/3.png";
-
+import image1Light from "../Assets/Img/1.jpg";
+import image2Light from "../Assets/Img/2.jpg";
+import image3Light from "../Assets/Img/3.jpg";
 //Import styled/animations - Swiper React components
 import styled from "styled-components";
-import { colors } from "../Assets/Other/stylingcolors";
+import { colors } from "../Assets/Other/themes";
 import { motion } from "framer-motion";
 
 //Swiper
@@ -19,7 +21,7 @@ import "swiper/css/autoplay";
 // install Swiper modules
 SwiperCore.use([Pagination, EffectFade, Autoplay]);
 
-const SlideShow = () => {
+const SlideShow = ({ theme }) => {
   const pagination = {
     clickable: true,
     renderBullet: function (index, className) {
@@ -31,10 +33,15 @@ const SlideShow = () => {
 
   const slides = [];
   const images = [image1, image2, image3];
+  const imagesLight = [image1Light, image2Light, image3Light];
   for (let i = 0; i < images.length; i++) {
     slides.push(
       <SwiperSlide className="swiper-image" key={i}>
-        <img src={images[i]} alt="test" tag="li" />
+        <img
+          src={(theme === "light" ? imagesLight : images)[i]}
+          alt="test"
+          tag="li"
+        />
       </SwiperSlide>
     );
   }
@@ -48,7 +55,7 @@ const SlideShow = () => {
     effect: "fade",
     fadeEffect: { crossFade: true },
     loop: true,
-    autoplay: {delay: 3000, disableOnInteraction: false },
+    autoplay: { delay: 3000, disableOnInteraction: false },
     grabCursor: true,
   };
 
@@ -63,12 +70,18 @@ const Slide = styled(motion.div)`
   min-height: 30vh;
   width: 100%;
   @media (min-width: 600px) {
-    width: 70%;
+    width: 40rem;
+    height: 25rem;
   }
   .swiper {
     z-index: 2;
     width: 100%;
     height: 100%;
+
+    @media (min-width: 600px) {
+      width: auto;
+      height: auto;
+    }
   }
 
   .swiper-slide {
@@ -108,7 +121,7 @@ const Slide = styled(motion.div)`
 const Images = styled(Swiper)`
   img {
     width: 100%;
-    border-radius: 1rem;
+    border-radius: 0.5rem !important;
   }
 `;
 
