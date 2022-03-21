@@ -47,6 +47,11 @@ const Button = styled.button`
   font-size: 1rem;
   border: none;
   border-radius: 3px;
+  transition: ease-in 0.1s;
+  &:hover {
+    cursor: pointer;
+    background: ${colors.buttonBgHover};
+  }
 `;
 
 export default Welcome;
