@@ -1,14 +1,15 @@
 // Components
 import Welcome from "../Components/Welcome";
+import Product from "../Components/Product";
 
 //Import styled and animations
 import styled from "styled-components";
-import { colors } from "../Assets/Other/themes";
+// import { colors } from "../Assets/Other/themes";
 import { motion } from "framer-motion";
 
 //Import logo/other images
 import logo from "../Assets/Img/Mingo_Desk_Final_horizontal_White.png";
-import logoLight from "../Assets/Img/Mingo_Desk_Final_horizontal_White.png";
+import logoLight from "../Assets/Img/Mingo_Desk_Final_horizontal.png";
 
 const LandingPage = ({ toggleTheme, theme }) => {
   return (
@@ -20,6 +21,7 @@ const LandingPage = ({ toggleTheme, theme }) => {
         onClick={toggleTheme}
       />
       <Welcome />
+      <Product theme={theme} />
     </StyledContainer>
   );
 };
@@ -29,16 +31,15 @@ const StyledContainer = styled(motion.div)`
   width: 100%;
   min-height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
 `;
 
 const MobileLogo = styled.img`
-  position: absolute;
-  top: 2rem;
-  left: 2rem;
+  align-self: flex-start;
   z-index: 100;
-  height: 2rem;
+  height: 1.5rem;
+  margin: 2rem 0;
 `;
 
 export default LandingPage;

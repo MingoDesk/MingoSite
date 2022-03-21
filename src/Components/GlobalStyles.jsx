@@ -17,6 +17,7 @@ const GlobalStyles = createGlobalStyle`
     &::-webkit-scrollbar-track {
       background-color: #333;
     }
+    overflow-x: hidden;
   }
   body {
     font-family: Sofia Pro, Helvetica, Arial, sans-serif;

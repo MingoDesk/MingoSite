@@ -16,6 +16,7 @@ const Welcome = () => {
 };
 
 const Container = styled(motion.div)`
+  margin-top: 15vh;
   width: 100%;
   > * {
     margin-top: 2rem;
@@ -24,7 +25,11 @@ const Container = styled(motion.div)`
     font-size: 2.5rem;
     font-weight: medium;
     background: ${colors.cyan};
-    background: linear-gradient(80deg, ${colors.cyan} 0%, ${colors.white} 100%);
+    background: linear-gradient(
+      80deg,
+      ${colors.text2} 0%,
+      ${colors.text3} 100%
+    );
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -37,8 +42,8 @@ const Buttons = styled.div`
 
 const Button = styled.button`
   padding: 0.5rem 2rem;
-  color: ${colors.text};
-  background: ${colors.cyan};
+  color: ${colors.buttonText};
+  background: ${colors.buttonBg};
   font-size: 1rem;
   border: none;
   border-radius: 3px;
