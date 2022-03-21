@@ -29,9 +29,11 @@ const InfoContainer = styled.div`
   margin-top: 10rem;
   background: ${colors.bg2};
   min-height: 30vh;
-  width: 100%;
+  width: 100vw;
   border-radius: 0.5rem;
   padding-bottom: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minMax(20rem, 1fr));
 `;
 
 export default InformationSection;
