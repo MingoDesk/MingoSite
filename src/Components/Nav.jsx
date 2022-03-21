@@ -2,12 +2,14 @@ import React from "react";
 
 //Import styles and animations
 import styled from "styled-components";
-import { colors } from "../Assets/Other/stylingcolors";
+import { colors } from "../Assets/Other/themes";
 import { motion } from "framer-motion";
 
 //Import logo
-import logo from "../Assets/Img/temp_logo.gif";
+import logo from "../Assets/Img/Mingo_Desk_Final_horizontal.png";
 import burger from "../Assets/Img/burger.svg";
+
+import { MenuIcon } from "@heroicons/react/solid";
 
 const Nav = () => {
   return (
@@ -15,10 +17,9 @@ const Nav = () => {
       <StyledMenu>
         <div className="desktop">
           <img src={logo} alt="Zebraff" />
-          <h1>MingoDesku</h1>
         </div>
         <div className="mobile">
-          <img src={burger} alt="Borgar" />
+          <MenuIcon />
         </div>
       </StyledMenu>
     </StyledNav>
@@ -33,8 +34,8 @@ const StyledNav = styled(motion.nav)`
     width: 3rem;
   }
   .mobile {
-    img {
-      cursor: pointer;
+    svg {
+      width: 3rem;
     }
   }
   .desktop {
