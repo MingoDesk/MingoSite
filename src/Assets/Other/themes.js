@@ -12,6 +12,7 @@ const dark = {
   text2: "#12B0FF",
   text3: "#F8F8F8",
   buttonBg: "#12B0FF",
+  buttonBgHover: "#008cd2",
   buttonText: "#F8F8F8",
   alwaysWhite: "#F8F8F8",
 };
@@ -29,6 +30,7 @@ const light = {
   text2: "#e84393",
   text3: "#6c5ce7",
   buttonBg: "#6c5ce7",
+  buttonBgHover: "#4d3cca",
   buttonText: "#F8F8F8",
   alwaysWhite: "#F8F8F8",
 };
@@ -52,6 +54,7 @@ export const colors = {
   cyan: (props) => props.theme.cyan,
   black: (props) => props.theme.black,
   buttonBg: (props) => props.theme.buttonBg,
+  buttonBgHover: (props) => props.theme.buttonBgHover,
   buttonText: (props) => props.theme.buttonText,
   alwaysWhite: (props) => props.theme.alwaysWhite,
 };
