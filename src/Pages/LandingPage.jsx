@@ -1,6 +1,7 @@
 // Components
 import Welcome from "../Components/Welcome";
 import Product from "../Components/Product";
+import InformationSection from "../Components/InformationSection";
 
 //Import styled and animations
 import styled from "styled-components";
@@ -22,12 +23,16 @@ const LandingPage = ({ toggleTheme, theme }) => {
       />
       <Welcome />
       <Product theme={theme} />
+      <InformationSection theme={theme} />
+      {/* Contact */}
+      {/* Security & Trust */}
+      <StyledFooter />
     </StyledContainer>
   );
 };
 
 const StyledContainer = styled(motion.div)`
-  padding: 0 2rem;
+  /* padding: 0 2rem; */
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -39,7 +44,12 @@ const MobileLogo = styled.img`
   align-self: flex-start;
   z-index: 100;
   height: 1.5rem;
-  margin: 2rem 0;
+  margin: 2rem 1rem 0;
+`;
+
+const StyledFooter = styled.footer`
+  width: 100%;
+  height: 5vh;
 `;
 
 export default LandingPage;

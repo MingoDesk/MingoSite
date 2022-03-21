@@ -1,6 +1,7 @@
 const dark = {
   cyan: "#12B0FF",
   bg: "#1C2239",
+  bg2: "#293657",
   bgElements: "#212846",
   white: "#F8F8F8",
   black: "#1C2239",
@@ -12,10 +13,12 @@ const dark = {
   text3: "#F8F8F8",
   buttonBg: "#12B0FF",
   buttonText: "#F8F8F8",
+  alwaysWhite: "#F8F8F8",
 };
 const light = {
   cyan: "#212846",
   bg: "#F8F8F8",
+  bg2: "#e84393",
   bgElements: "#212846",
   white: "#1C2239",
   black: "#F8F8F8",
@@ -27,6 +30,7 @@ const light = {
   text3: "#6c5ce7",
   buttonBg: "#6c5ce7",
   buttonText: "#F8F8F8",
+  alwaysWhite: "#F8F8F8",
 };
 
 export const Themes = {
@@ -36,6 +40,7 @@ export const Themes = {
 
 export const colors = {
   bg: (props) => props.theme.bg,
+  bg2: (props) => props.theme.bg2,
   bgElements: (props) => props.theme.bgElements,
   text: (props) => props.theme.text,
   text2: (props) => props.theme.text2,
@@ -48,4 +53,5 @@ export const colors = {
   black: (props) => props.theme.black,
   buttonBg: (props) => props.theme.buttonBg,
   buttonText: (props) => props.theme.buttonText,
+  alwaysWhite: (props) => props.theme.alwaysWhite,
 };

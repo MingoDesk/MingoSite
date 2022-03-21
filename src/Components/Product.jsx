@@ -13,9 +13,10 @@ const Product = ({ theme }) => {
 
 const ImageContainer = styled.div`
   width: 100%;
-  margin-top: 15vh;
+  margin-top: 10rem;
   img {
-    width: 100%;
+    width: 90%;
+    border-radius: 0.25rem;
   }
 `;
 

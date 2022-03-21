@@ -9,6 +9,8 @@ import { motion } from "framer-motion";
 import logo from "../Assets/Img/Mingo_Desk_Final_horizontal.png";
 import burger from "../Assets/Img/burger.svg";
 
+import { MenuIcon } from "@heroicons/react/solid";
+
 const Nav = () => {
   return (
     <StyledNav>
@@ -17,7 +19,7 @@ const Nav = () => {
           <img src={logo} alt="Zebraff" />
         </div>
         <div className="mobile">
-          <img src={burger} alt="Borgar" />
+          <MenuIcon />
         </div>
       </StyledMenu>
     </StyledNav>
@@ -32,8 +34,8 @@ const StyledNav = styled(motion.nav)`
     width: 3rem;
   }
   .mobile {
-    img {
-      cursor: pointer;
+    svg {
+      width: 3rem;
     }
   }
   .desktop {
