@@ -18,6 +18,7 @@ const GlobalStyles = createGlobalStyle`
       background-color: #333;
     }
     overflow-x: hidden;
+    scroll-behavior: smooth;
   }
   body {
     font-family: Sofia Pro, Helvetica, Arial, sans-serif;
