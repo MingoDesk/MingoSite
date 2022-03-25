@@ -2,6 +2,7 @@
 import Welcome from "../Components/Welcome";
 import Product from "../Components/Product";
 import InformationSection from "../Components/InformationSection";
+import Contact from "../Components/Contact";
 
 //Import styled and animations
 import styled from "styled-components";
@@ -24,7 +25,7 @@ const LandingPage = ({ toggleTheme, theme }) => {
       <Welcome />
       <Product theme={theme} />
       <InformationSection theme={theme} />
-      {/* Contact */}
+      <Contact />
       {/* Security & Trust */}
       <StyledFooter />
     </StyledContainer>

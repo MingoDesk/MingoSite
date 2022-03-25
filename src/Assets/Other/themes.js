@@ -15,6 +15,7 @@ const dark = {
   buttonBgHover: "#008cd2",
   buttonText: "#F8F8F8",
   alwaysWhite: "#F8F8F8",
+  transparent: "rgba(0, 0, 0, 0)",
 };
 const light = {
   cyan: "#212846",
@@ -33,6 +34,7 @@ const light = {
   buttonBgHover: "#4d3cca",
   buttonText: "#F8F8F8",
   alwaysWhite: "#F8F8F8",
+  transparent: "rgba(0, 0, 0, 0)",
 };
 
 export const Themes = {
@@ -57,4 +59,5 @@ export const colors = {
   buttonBgHover: (props) => props.theme.buttonBgHover,
   buttonText: (props) => props.theme.buttonText,
   alwaysWhite: (props) => props.theme.alwaysWhite,
+  transparent: (props) => props.theme.transparent,
 };
